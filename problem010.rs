@@ -1,5 +1,8 @@
+use std::num::sqrt;
+
 fn is_prime(n: int) -> bool {
-    for i in range(2, n) {
+    let upper_limit = sqrt(n as f64) + 1.0;
+    for i in range(2, upper_limit as int) {
         if n % i == 0 {
             return false;
         }
